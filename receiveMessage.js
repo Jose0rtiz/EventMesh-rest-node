@@ -1,13 +1,6 @@
 const axios = require('axios');
 require('dotenv').config();
 
-// Configura tus credenciales y la URL de la Event Mesh
-//const eventMeshUrl = "https://enterprise-messaging-pubsub.cfapps.eu30.hana.ondemand.com";
-//const queueName = "NOVIS%2FTest%2FEventMeshTest%2FFirstQueue";
-//const tokenEndpoint = "https://integration-suite-ym32i65h.authentication.eu30.hana.ondemand.com/oauth/token";
-//const clientId = "sb-default-02b4293a-df2e-492a-b233-3d1b7268faf5-clone!b4871|xbem-service-broker-!b34";
-//const clientSecret = "97fa7921-f258-4042-b2c1-0abecaedefd3$JaYnKBnbE5sIL0Br4R_9F527CwANjukJAneODi6WJjU=";
-
 // Función para obtener el token de acceso
 const getToken = async () => {
     const response = await axios.post(process.env.tokenEndpoint, null, {
